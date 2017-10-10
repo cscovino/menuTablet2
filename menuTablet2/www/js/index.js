@@ -988,12 +988,12 @@ var app = {
             emailjs.send("gmail","pedidos",{message_html: codigo});
             setTimeout(function(){
                 app.sendOrder();
+                app.refreshInventory();
+                app.saveFirebase();
+                app.order = [];
+                app.refreshCart();
+                app.refreshShopping();
             },200);
-            app.refreshInventory();
-            app.saveFirebase();
-            app.order = [];
-            app.refreshCart();
-            app.refreshShopping();
             app.previousPage();
             alert('Pedido enviado');
         }
@@ -1145,6 +1145,7 @@ var app = {
     },
 
     sendOrder: function(){
+        debugger;
         var hoy = new Date();
         hoy = hoy.toLocaleDateString();
         if (app.model.order['fecha'] === hoy) {
