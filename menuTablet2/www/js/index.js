@@ -1152,18 +1152,10 @@ var app = {
             for (var i=0; i<app.order.length; i++) {
                 aux.push(app.order[i]);
             }
-            firebase.database().ref().update({order:{'fecha':hoy,'orders':aux}}).then(function(){}).catch(function(error) {
-                setTimeout(function(){
-                    app.sendOrder();
-                },200);
-            });
+            firebase.database().ref().update({order:{'fecha':hoy,'orders':aux}});
         }
         else{
-            firebase.database().ref().update({order:{'fecha':hoy,'orders':app.order}}).then(function(){}).catch(function(error) {
-                setTimeout(function(){
-                    app.sendOrder();
-                },200);
-            });
+            firebase.database().ref().update({order:{'fecha':hoy,'orders':app.order}});
         }
     },
 
