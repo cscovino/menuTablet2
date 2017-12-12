@@ -23,7 +23,9 @@
     <header id="header-menu">
     <div style="position:fixed;top:1em;left:1em;"><img src="img/soutec.png" height="30px"></div>
     <div id="buttons">
-      <span style="display:none;font-size:30px;position:fixed;right:4em;top:0.4em;" id="back"><img src="img/previous.png"></span><span style="display:none;position:fixed;top:4.2em;right:8.6em;" id="back2">Atrás</span>
+      <span style="display:none;font-size:30px;position:fixed;right:7.4em;top:0.4em;" id="back"><img src="img/previous.png"></span><span style="display:none;position:fixed;top:4.2em;right:15.3em;" id="back2">Atrás</span>
+      &nbsp;&nbsp;&nbsp;
+      <span data-toggle="modal" data-target="#myModal11" style="display:none;font-size:30px;position:fixed;right:4.2em;top:0.4em;" id="check"><img src="img/checklist.png" height="55px"></span><span style="display:none;position:fixed;top:4.6em;right:8.6em;" id="check2">Estado</span>
       &nbsp;&nbsp;&nbsp;
       <span data-toggle="modal" data-target="#myModal2"><img src="img/bandejitapq.png" style="position:fixed;right:1.2em;top:1em;"><span class="badge badge-pill badge-danger" id="number-order" style="font-size:10px;position:fixed;top:2.2em;right:2.7em;display:none;">0</span></span><span style="position:fixed;top:4.2em;right:1.6em;" data-toggle="modal" data-target="#myModal2">Ordenar</span>
     </div>
@@ -78,6 +80,27 @@
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
         <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="app.sendMail();">Ordenar</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- ###################################################################################################### -->
+<!-- ###################################################################################################### -->
+
+<!-- ###################################################################################################### -->
+<!-- #######################################  Modal 11 ##################################################### -->
+<!-- ###################################################################################################### -->
+<div class="modal fade" id="myModal11" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel" style="color: #000;">Pedido</h4>
+      </div>
+      <div class="modal-body" id="orderstatus">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
       </div>
     </div>
   </div>
