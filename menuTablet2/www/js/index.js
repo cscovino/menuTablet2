@@ -65,7 +65,7 @@ var app = {
                                 if (app.model.order.orders[i][key]['entregado'] === 1) {
                                     codigo += '<td>'+Entregado+'</td>';    
                                 }
-                                else if (app.model.order.orders[i][key]['entregado'] === 2) {}{
+                                else if (app.model.order.orders[i][key]['entregado'] === 2) {
                                     codigo += '<td>'+Recibido+'</td>';
                                 }
                                 else{
