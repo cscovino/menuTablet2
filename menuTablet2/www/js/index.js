@@ -63,13 +63,13 @@ var app = {
                                 codigo += '<td>'+key+'</td>'
                                 codigo += '<td>'+app.model.order.orders[i][key]['Bebida']+'</td>';
                                 if (app.model.order.orders[i][key]['entregado'] === 1) {
-                                    codigo += '<td>'+Entregado+'</td>';    
+                                    codigo += '<td>Entregado</td>';    
                                 }
                                 else if (app.model.order.orders[i][key]['entregado'] === 2) {
-                                    codigo += '<td>'+Recibido+'</td>';
+                                    codigo += '<td>Recibido</td>';
                                 }
                                 else{
-                                    codigo += '<td>'+Enviado+'</td>';
+                                    codigo += '<td>Enviado</td>';
                                 }
                             codigo += '</tr>';
                     }
