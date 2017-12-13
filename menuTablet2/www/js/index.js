@@ -55,14 +55,22 @@ var app = {
                     codigo += '<tr>';
                         codigo += '<th>Nombre</th>';
                         codigo += '<th>Bebida</th>';
-                        codigo += '<th>Entregado</th>';
+                        codigo += '<th>Estado</th>';
                     codigo += '</tr>';
                 for (var i=0; i<app.model.order.orders.length; i++) {
                     for(var key in app.model.order.orders[i]){
                             codigo += '<tr onclick="app.idConfirm('+i+');" data-toggle="modal" data-target="#myModal7">';
                                 codigo += '<td>'+key+'</td>'
                                 codigo += '<td>'+app.model.order.orders[i][key]['Bebida']+'</td>';
-                                codigo += '<td>'+app.model.order.orders[i][key]['entregado']+'</td>';
+                                if (app.model.order.orders[i][key]['entregado'] === 1) {
+                                    codigo += '<td>'+Entregado+'</td>';    
+                                }
+                                else if (app.model.order.orders[i][key]['entregado'] === 2) {}{
+                                    codigo += '<td>'+Recibido+'</td>';
+                                }
+                                else{
+                                    codigo += '<td>'+Enviado+'</td>';
+                                }
                             codigo += '</tr>';
                     }
                 }
