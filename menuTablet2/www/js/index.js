@@ -122,9 +122,9 @@ var app = {
         var codigo = '<table class="table table-bordered" id="guests3">';
                 codigo += '<tbody>';
                     codigo += '<tr>';
-                        codigo += '<th>Fecha</th>';
-                        codigo += '<th>Hora</th>';
                         codigo += '<th>Título</th>';
+                        codigo += '<th>Hora</th>';
+                        codigo += '<th>Sala</th>';
                     codigo += '</tr>';
                 for (var key in app.model.meetings) {
                         var dd = app.model.meetings[key]['fecha'].split(' ');
@@ -133,9 +133,9 @@ var app = {
                         var today = new Date();
                         if (dait.toDateString() === today.toDateString()) {
                             codigo += '<tr onclick="app.userPage('+"'"+key+"'"+');" data-dismiss="modal">';
-                                codigo += '<td>Hoy</td>';
-                                codigo += '<td>'+dd[1]+' '+dd[2]+' - '+dd[4]+' '+dd[5]+'</td>';
                                 codigo += '<td>'+app.model.meetings[key]['titulo']+'</td>';
+                                codigo += '<td>'+dd[1]+' '+dd[2]+' - '+dd[4]+' '+dd[5]+'</td>';
+                                codigo += '<td>'+app.model.meetings[key]['sala']+'</td>';
                             codigo += '</tr>';
                         }
                 }
